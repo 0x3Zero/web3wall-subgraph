@@ -3,6 +3,9 @@
     "x3ZeroERC1155": {
       "address": "0xD7B94dAEebaF778FD37De3082e3944C49Ed10bae",
       "startBlock": 39959514
+    },
+    "Web3WallUtility": {
+      "address": "0xcE7041AC5E14a6d22Ce84CdF9D4CeE96Efa6725C"
     }
   }
 }

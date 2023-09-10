@@ -1,6 +1,6 @@
 specVersion: 0.0.5
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum
     name: x3ZeroERC1155
@@ -27,7 +27,7 @@ dataSources:
         - Unpaused
       abis:
         - name: x3ZeroERC1155
-          file: ./abis/x3ZeroERC1155.json
+          file: x3ZeroERC1155/abis/x3ZeroERC1155.json
       eventHandlers:
         - event: ApprovalForAll(indexed address,indexed address,bool)
           handler: handleApprovalForAll
@@ -51,7 +51,7 @@ dataSources:
           handler: handleURI
         - event: Unpaused(address)
           handler: handleUnpaused
-      file: ./src/x-3-zero-erc-1155.ts
+      file: x3ZeroERC1155/x3ZeroERC1155.wasm
   - kind: ethereum
     name: Web3WallUtility
     network: mumbai
@@ -71,7 +71,7 @@ dataSources:
         - Web3WallUtilityRoleRevoked
       abis:
         - name: Web3WallUtility
-          file: ./abis/Web3WallUtility.json
+          file: Web3WallUtility/abis/Web3WallUtility.json
       eventHandlers:
         - event: Forked(address,uint256,bytes)
           handler: handleForked
@@ -83,4 +83,4 @@ dataSources:
           handler: handleRoleGranted
         - event: RoleRevoked(indexed bytes32,indexed address,indexed address)
           handler: handleRoleRevoked
-      file: ./src/web-3-wall-utility.ts
+      file: Web3WallUtility/Web3WallUtility.wasm
